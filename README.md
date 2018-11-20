@@ -7,11 +7,12 @@
 2、打包
 执行 npm run dev 打包的是未压缩的代码，而 npm run build 是压缩后的代码。
 修改 package.json 中 scripts 部分：
-
+```
 "scripts": {
 "dev": "webpack --mode development", //生产模式：启用了 代码压缩、作用域提升（scope hoisting）、 tree-shaking，使代码最精简
 "build": "webpack --mode production" // 开发模式：相较于更小体积的代码，提供的是打包速度上的优化
 }
+```
 零配置打包后默认生成dist/main.js文件
 
 webpack的诉求：
@@ -42,16 +43,15 @@ loader
 
 
 
-
-entry    配置入口资源
-output   配置编译后的资源
-module   资源处理
-resolve  配置资源别名/扩展名等
-plugins  插件，比loader更强大
-loader     转换器
-devServer  开发服务器
-mode       模式（开发环境、生产环境）
----------------------
+ * entry    配置入口资源
+ * output   配置编译后的资源
+ * module   资源处理
+ * resolve  配置资源别名/扩展名等
+ * plugins  插件，比loader更强大
+ * loader     转换器
+ * devServer  开发服务器
+ * mode       模式（开发环境、生产环境）
+```
 // 基于node的 遵循commonjs规范的
 let path = require('path');//node的模块
 module.exports = {
@@ -74,11 +74,11 @@ module.exports = {
   mode:'development', // 可以更改模式
   resolve:{}, // 配置解析
 }
-
+```
 3、loader
 解析图片、css、html等
 css-loader style-loader html-withimg-loader(安装 npm install css-loader style-loader file-loader html-withimg-loader -s) :
-
+```
 module:{//关于模块配置
     rules:[
         // css样式loader
@@ -107,34 +107,34 @@ module:{//关于模块配置
         }
 ]
 }
+```
+                4、plugins
+                抽离html css
+                html css (npm install html-webpack-plugin extract-text-webpack-plugin@next -s)
+```
+                plugins:[//插件
+                // css
+                new extracttextwebpack("./css/[name].css"),
+                // html插件
+                new htmlwebpackplugin({
+                template:"./src/index.html",
+                // filename:"index.html",重命名
+                minify:{//去除多余的
+                removeAttributeQuotes:true,//去除引号
+                removeComments:true,//去除注释
+                removeEmptyAttributes:true,//去除空属性
+                collapseWhitespace:true//去除空格
+                }
+                })
+                ]
 
-4、plugins
-抽离html css
-html css (npm install html-webpack-plugin extract-text-webpack-plugin@next -s)
-
-plugins:[//插件
-// css
-new extracttextwebpack("./css/[name].css"),
-// html插件
-new htmlwebpackplugin({
-template:"./src/index.html",
-// filename:"index.html",重命名
-minify:{//去除多余的
-removeAttributeQuotes:true,//去除引号
-removeComments:true,//去除注释
-removeEmptyAttributes:true,//去除空属性
-collapseWhitespace:true//去除空格
-}
-})
-]
-
-
+```
 4、bable转换 ES6 代码，解决浏览器兼容问题用 babel 转换 ES6 代码
    4.1：安装babel依赖  npm install -D babel-loader @babel/core @babel/preset-env 
    -----使用 babel-polyfill 解决兼容性问题 : npm install -D @babel/plugin-transform-runtime  @babel/polyfill
    4.2: 在根目录新建一个babel配置文件 .babelrc：
-
-
+```
+                     
                  {
                  "presets": [
                          '@babel/preset-env'
@@ -143,10 +143,12 @@ collapseWhitespace:true//去除空格
                           '@babel/plugin-transform-runtime'
                         ]
                  }
+```
 在config文件中
 module.exports = { entry: ["@babel/polyfill", "./app/js"], };
 
 4.3:将配置用于webpack打包中，在根目录下新建webpack.config.js配置文件
+```
   module.exports = {
                 module: {
                   rules: [
@@ -160,12 +162,14 @@ module.exports = { entry: ["@babel/polyfill", "./app/js"], };
                   ]
                  }
       }
+```
     4.4：在package.json中配置
+```
              "scripts": {
                     "dev": "webpack --mode development ",
                     "build": "webpack --mode production "
                    }
-
+```
 
 
 
