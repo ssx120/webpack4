@@ -1,3 +1,4 @@
+
 1、创建
    mkdir webpack-4 && cd webpack-4 //创建项目文件并进入项目
    npm init -y //初始化文件
@@ -164,6 +165,7 @@ module.exports = { entry: ["@babel/polyfill", "./app/js"], };
                     "dev": "webpack --mode development ",
                     "build": "webpack --mode production "
                    }
+
 
 
 
