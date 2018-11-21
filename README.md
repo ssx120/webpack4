@@ -163,14 +163,22 @@ module.exports = { entry: ["@babel/polyfill", "./app/js"], };
                  }
       }
 ```
-    4.4：在package.json中配置
+    4.4：server服务（npm install webpack-dev-server -s）
+    在package.json中配置
 ```
              "scripts": {
-                    "dev": "webpack --mode development ",
-                    "build": "webpack --mode production "
+                    "start": "webpack-dev-server --inline  --open"
                    }
 ```
-
+```
+// 本地服務
+  devServer: {
+    contentBase: "src",
+    inline: true
+    // host:"0.0.0.0",
+    // hot:"8080"
+  },
+```	
 
 
 
