@@ -1,0 +1,671 @@
+*{
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+html {
+ -webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input,
+button {
+ resize: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+ -webkit-appearance: none;
+}
+button{
+ border: none;
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+ display: block;
+}
+/* 图片自适应 */
+img {
+ height: auto;
+ width: auto\9;
+ -ms-interpolation-mode: bicubic;
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+ margin: 0;
+ padding: 0;
+ border: none;
+ -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*取消链接高亮*/
+}
+body {
+ font-family: Microsoft YaHei, simhei, Tahoma, Arial, sans-serif;
+ color: #333333;
+ background-color: #FFFFFF;
+}
+em,
+i {
+ font-style: normal;
+}
+strong {
+ font-weight: normal;
+}
+.clearfix:after {
+ content: "";
+ display: block;
+ visibility: hidden;
+ height: 0;
+ clear: both;
+}
+.clearfix {
+ zoom: 1;
+}
+a {
+ font-family: Microsoft YaHei, Tahoma, Arial, sans-serif;
+ color: #fff
+}
+a,
+a:hover,
+a:active,
+a:link,
+a:visited {
+ text-decoration: none;
+}
+ul,
+ol {
+ list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-size: 100%;
+ font-family: Microsoft YaHei;
+}
+img {
+ border: none;
+ vertical-align: middle;
+}
+body,
+html {
+ width: 100%;
+ min-height: 700px;
+ margin: 0;
+ font-family: Microsoft YaHei;
+ position: relative;
+ -ms-overflow-x: hidden;
+ overflow-x: hidden;
+}
+/* 轮播图的箭头定位 */
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    left: 10%;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    right: 10%;
+}
+.swiper-pagination{
+    top:90%;
+    left: 40%;
+}
+.swiper-pagination-bullet{
+    margin: 0 15px;
+}
+/* 移动端 */
+@media screen and (max-width:480px){
+.nav_info{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1% 10%;
+        display: flex;
+        justify-content: space-between;
+        background: #6a645c;
+        z-index:9;
+}
+/* logo */
+.logo img{
+    width: 50%;
+}
+
+/* 菜單 */
+.menu_a{
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center
+}
+.menu_a span{
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #fff;
+}
+.menu{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 100%;
+    left:-100%;
+    background: #fff;
+    padding: 5% 5%;
+    opacity: .2;
+    transition: all 1s;
+} 
+.menu_b{
+    left:0;
+    opacity: 1;
+}
+#menu>div{
+    margin: 10%;
+}
+
+#menu a{
+     color: #333333;
+}
+.banner_content,.swiper-container{
+    height: 100%;
+    width: 100%;
+        /* padding-top: 8%; */
+}
+.section2 p{
+    width: 40%;
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    line-height: 25px;
+    opacity: 0;
+    font-size: 16px;
+    color:#333333;
+}
+.section2 h5{
+    position: absolute;
+    top: 46%;
+    left: 10%;
+    font-size: 24px;
+    color: #fff;
+    opacity: 0;
+}
+/* 回到头部 */
+.top{
+    display: none;
+}
+.footer_info{
+   flex-direction:column;
+   align-items: center;
+}
+/* 地图 */
+.map_wrap span{
+   display: none;
+}
+.city{
+    width: 100px;
+    color: #ffb642;
+    position: absolute;
+    left: 1000%;
+    top: 50%;
+}
+.banner1{
+    background:url('../img/banner/banner_mb1.jpg')no-repeat center;
+    background-size: cover;
+}
+.banner2{
+    background:url('../img/banner/banner_mb2.jpg')no-repeat center;
+    background-size: cover;
+}
+.companyinfo p{
+    padding: 10px;
+}
+.map_wrap{
+    margin-top: 10%;
+    width: 60%;
+}
+/* 轮播图箭头隐藏 */
+.swiper-button-next.swiper-button-white, .swiper-container-rtl .swiper-button-prev.swiper-button-white{
+    display: none;
+}
+.swiper-button-prev.swiper-button-white, .swiper-container-rtl .swiper-button-next.swiper-button-white{
+    display: none;
+}
+/* 合作伙伴表格 */
+.pc_table{
+    display: none;
+}
+} 
+/* pc端 */
+@media screen and (min-width:480px){
+.nav_info{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1% 10%;
+    display: flex;
+    justify-content: space-between;
+    background: #6a645c;
+    z-index:9;
+}
+/* logo */
+.logo{
+    width: 240px;
+    height: 52px;
+}
+/* logo图片 */
+.logo img{
+    width: 100%;
+}
+/*导航 */
+#menu{
+    display: flex;
+    justify-content: space-around;
+}
+nav>div{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border:solid 2px #ffb642;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 45px;
+    padding: 5px;
+}
+.page_3{
+    padding: 0;
+}
+nav>div:hover{
+    background: #ffb642;
+}
+/* banner */
+.banner_content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+.swiper-container{
+    height: 100%;
+}
+.swiper-slide{
+   background-size: cover;
+}
+/* banner */
+.swiper-wrapper img{
+    display: none;
+}
+.banner1{
+    background:url('../img/banner/banner1.jpg')no-repeat center;
+    background-size: cover;
+}
+.banner2{
+    background:url('../img/banner/banner2.jpg')no-repeat center;
+    background-size: cover;
+}
+/* 第二屏 */
+.section2 p{
+    width: 40%;
+    position: absolute;
+    top: 30%;
+    right: 6%;
+    line-height: 30px;
+    opacity: 0;
+
+}
+.section2 h5{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    font-size: 40px;
+    color: #fff;
+    opacity: 0;
+}
+/* 联系我们 */
+.companyinfo p{
+    line-height: 30px;
+    padding: 30px;
+}
+.city{
+    width: 100px;
+    color: #ffb642;
+    position: absolute;
+    left: 1000%;
+    top:58%;
+}
+.map_wrap{
+    width: 35%;
+}
+.mobile_table{
+    display: none;
+}
+/* banner点导航 */
+.swiper-pagination{
+    display: none;
+}
+}
+
+/* pc end */
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+.section{
+  width: 100%;
+  height: 100%;
+}
+
+/* 分享
+.share{
+   position: absolute;
+   bottom:50px;
+   right: 5%;
+   background: #191613;
+   z-index: 1;
+   border-radius: 35px;
+   padding: 5px 15px;
+   border: solid 1px #fff;
+   color: #ccc;
+}
+.share i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+.share i:hover{
+    color: #ffb642;
+} */
+/* 第二页------------------------------------------------------------------------------------------- */
+.section2{
+    position: relative;
+}
+.section2 .about{
+    margin-left: -100%;
+    height: 100%;
+    width: 100%;
+    background:url("../img/about.jpg")no-repeat center;
+    background-size: cover;
+}
+/* 第三屏 */
+.section3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+}
+.section3 img{
+    display: block;
+    width: 45%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 1s;
+}
+.section3 .section3_title{
+    padding: 0 5%;
+    position: absolute;
+    top: 25%;
+} 
+.section3>div{
+    position: relative;
+    /* padding-top:10%;  */
+    cursor: pointer;
+}
+.section3 .service{
+    flex: 1;
+    background:#45baf2; 
+}
+/* 我们的服务hover */
+.section3 .service:hover img{
+    transform:rotateY(360deg);
+}
+.section3 .operate:hover .textinfo{
+   position: absolute;
+}
+.section3 .analysis:hover .textinfo{
+   position: absolute;
+}
+
+.section3 .analysis{
+    flex: 1;
+    background: url("../img/we.png")no-repeat center ;
+    background-size: cover;
+    padding: 0;
+    transition: all 1s;
+}
+.section3 .analysis .analysis_w{
+     width: 100%;
+     height: 100%;
+     background: #f9d052;
+}
+
+
+.textinfo {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 0 3%;
+    transition: all 1s;
+    /* color: #6a645c; */
+}
+.section3 .operate{
+    flex: 1;
+    background: url("../img/yy.jpg")no-repeat center ;
+    background-size: cover;
+    padding: 0;
+    transition: all 1s;
+}
+.section3 .operate .operate_w{
+    width: 100%;
+    height: 100%;
+    background: #ff66b9;
+}
+/* 第四屏 */
+.section4 {
+    position: relative;
+}
+.section4 img{
+    display: block;
+}
+.section4 .company{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8%;
+    opacity: 0;
+    transform: scale(.3);
+}
+.section4 h5{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    transform: scale(.2);
+    opacity: 0;
+
+}
+.section4 .customer{
+        position: absolute;
+        top: 20%;
+        left: 0;
+}
+/* 第五屏 */
+/* footer */
+.section5{
+    position: relative;
+    background: url("../img/banner/footer.jpg")no-repeat center ;
+    background-size: cover;
+}
+.contact{
+    padding-top: 10%;
+}
+.footer{
+    /* background: rgba(50, 49, 47, .8); */
+    padding: 0 8% 15px 8%;
+}
+.footer_info{
+    display: flex;
+    justify-content: space-between;
+}
+.lianxi{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.lianxi h5{
+    color: #ffb642;
+    font-size:38px;
+    font-weight: normal;
+}
+.lianxi p{
+    font-size: 20px;
+    color:#fff;
+}
+.footer_info{
+    margin-top: 6%;
+    color: #ccc;
+}
+
+.companyinfo i{
+    display:inline-block;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ffb642;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: #ffb642;
+}
+.ewm{
+    font-size: 12px;
+}
+.map{
+     position: relative;
+     overflow: hidden;
+}
+.map,.map img{
+    width: 100%;
+    display: block; 
+}
+
+.city img{
+    width: 10px;
+    display: inline;
+}
+.user_top{
+    display: flex;
+    justify-content: space-between;
+}
+.user_top input{
+    width: 45%;
+}
+textarea{
+     background: transparent;
+     width: 100%;
+     height: 100px;
+     color: #ccc;
+     font-size: 16px;
+}
+.footer button{
+    width: 100px;
+    height: 40px;
+    background: #ffb642;
+    border: 0;
+    color:#fff;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 1s;
+}
+.footer button:hover{
+    background: #333333;
+    border: 1px solid #fff;
+}
+.email input{
+    width: 100%;
+}
+.top{
+    position: absolute;
+    right:0;
+    z-index: 1;
+    /* bottom: 10%; */
+}
+/* 备案信息 */
+.beian{
+    width: 100%;
+    position: absolute;
+    font-size: 12px;
+    bottom: 25px;
+    color: #ccc;
+    text-align: center;
+
+}
+/* } */

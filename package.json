@@ -1,31 +1,40 @@
 {
-  "name": "webpack4",
+  "name": "bozhe.net.cn",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode production",
-    "build": "webpack --mode development",
-    "start": "webpack-dev-server --inline  --open"
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development  --open chrome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.1.6",
-    "@babel/preset-env": "^7.1.6",
-    "babel-loader": "^8.0.4",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "@babel/preset-env": "^7.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
-    "css-loader": "^1.0.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.0.0",
+    "autoprefixer": "^9.4.2",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.0.0",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "html-withimg-loader": "^0.1.16",
-    "style-loader": "^0.23.1"
+    "i": "^0.3.6",
+    "mini-css-extract-plugin": "^0.5.0",
+    "move-js": "^0.5.0",
+    "npm": "^6.5.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "webpack-dev-server": "^3.1.10"
   }
 }

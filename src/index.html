@@ -5,10 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.9/jquery.fullPage.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.9/jquery.fullPage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.5.9/vendors/jquery.slimscroll.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.extensions.min.js"> </script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <!-- <link rel="stylesheet" href="./font/iconfont.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
 <body>
-  <h3>这是webpack4</h3>  
-  <img src="./img/JPEG.jpg" alt="">
-  <!-- fdr -->
+    <!-- 头部导航----logo -->
+    <div class="nav_info ">
+        <!-- logo -->
+        <div class="logo">
+            <a href="#page1"><img src="./img/logo.png" alt="" /></a>
+        </div>
+        <!-- 导航 -->
+        <div class="menu_a">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="menu" class="menu">
+            <div data-menuanchor='page1' class="active">
+                <a href="#page1">首页</a>
+            </div>
+            <div data-menuanchor='page2'>
+                <a href="#page2">关于我们</a>
+            </div>
+            <div data-menuanchor='page3' class="page_3">
+                <a href="#page3">我们的服务</a>
+            </div>
+            <div data-menuanchor='page4'>
+                <a href="#page4">合作客户</a>
+            </div>
+            <div data-menuanchor='page5'>
+                <a href="#page5">联系我们</a>
+            </div>
+        </nav>
+    </div>
+    <div id="fullpage">
+        <!-- 第一屏 -->
+        <div class="section section1">
+            <!-- 轮播图 -->
+            <div class="banner_content">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide banner1" >
+                            <!-- <img src="./img/banner/banner1.jpg" alt=""> -->
+                        </div>
+                        <div class="swiper-slide banner2" >
+                            <!-- <img src="./img/banner/banner2.jpg" alt=""> -->
+                        </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination swiper-pagination-white"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <!-- 微博微信分享 -->
+                <!-- <div class="share">
+                    <span>分享</span>
+                    <i class="iconfont icon-weibo"></i>
+                    <i class="iconfont icon-weixin"></i>
+                </div> -->
+                <!-- end分享 -->
+              </div>
+             </div>
+        </div>
+        <!-- 第二屏 关于我们-->
+        <div class="section section2">
+            <div class="about"></div>
+            <h5>关于我们</h5>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack
+                4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpa
+                ck4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4
+            </p>
+       </div>
+        <!-- 第三屏 我们的服务-->
+        <div class="section section3">
+            <div class="service">
+                <p class="section3_title">webpack</p>
+                <img src="./img/aboutus.png" alt="">
+            </div>
+            <div class="operate">
+                <div class="operate_w">
+                    <p class="zy section3_title">webpack</p>
+                    <img src="./img/fuwu.png" alt="">
+                </div>
+                <div class="textinfo">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4</p>
+                </div>
+
+            </div>
+            <div class="analysis">
+                <div class="analysis_w">
+                    <p class="zy section3_title">webpack</p>
+                    <img src="./img/dian.png" alt="">
+                </div>
+                <div class="textinfo analysis_text">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4webpack4</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 第四屏 合作客户-->
+        <div class="section section4">
+            <!-- pc -->
+            <div class="customer pc_table">
+                <h5>合作客户</h5>
+                <div class="company">
+                    <table>
+                        <tr>
+                            <td><img src="./img/cooperation/tk.png" alt=""></td>
+                            <td><img src="./img/cooperation/renshou.png" alt=""></td>
+                            <td><img src="./img/cooperation/daduhui.png" alt=""></td>
+                            <td><img src="./img/cooperation/taiping.png" alt=""></td>
+                            <td><img src="./img/cooperation/zhaoshang.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/cooperation/jiaotong.png" alt=""></td>
+                            <td><img src="./img/cooperation/mingsheng.png" alt=""></td>
+                            <td><img src="./img/cooperation/pufa.png" alt=""></td>
+                            <td><img src="./img/cooperation/CHINA GUANGFA BANK.png" alt=""></td>
+                            <td><img src="./img/cooperation/puhui.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./img/cooperation/yirendai.png" alt=""></td>
+                            <td><img src="./img/cooperation/ppdai.png" alt=""></td>
+                            <td><img src="./img/cooperation/niwodai.png" alt=""></td>
+                            <td><img src="./img/cooperation/zhongtenxin.png" alt=""></td>
+                            <td><img src="./img/cooperation/houben.png" alt=""></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 移动端 -->
+            <div class="customer mobile_table">
+                            <h5>合作客户</h5>
+                            <div class="company">
+                                <table>
+                                    <tr>
+                                        <td><img src="./img/cooperation/tk.png" alt=""></td>
+                                        <td><img src="./img/cooperation/renshou.png" alt=""></td>
+                                        <td><img src="./img/cooperation/daduhui.png" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./img/cooperation/taiping.png" alt=""></td>
+                                        <td><img src="./img/cooperation/zhaoshang.png" alt=""></td>
+                                        <td><img src="./img/cooperation/jiaotong.png" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./img/cooperation/mingsheng.png" alt=""></td>
+                                        <td><img src="./img/cooperation/pufa.png" alt=""></td>
+                                        <td><img src="./img/cooperation/CHINA GUANGFA BANK.png" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./img/cooperation/puhui.png" alt=""></td>
+                                        <td><img src="./img/cooperation/yirendai.png" alt=""></td>
+                                        <td><img src="./img/cooperation/ppdai.png" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="./img/cooperation/niwodai.png" alt=""></td>
+                                        <td><img src="./img/cooperation/zhongtenxin.png" alt=""></td>
+                                        <td><img src="./img/cooperation/houben.png" alt=""></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+        </div>
+        <!-- 第五屏 联系我们-->
+        <div class="section section5">
+            <div class="contact">
+                <div class="footer">
+                    <div class="lianxi">
+                        <h5>联系我们</h5>
+                        <p>TONTACT US</p>
+                    </div>
+                    <div class="footer_info">
+                        <!-- 公司信息 -->
+                        <div class="companyinfo">
+                            <p><i class="iconfont icon-dizhi"></i>webpack</p>
+                            <!-- <p><i class="iconfont icon-dianhua"></i>电话：021-31666458</p> -->
+                            <p><i class="iconfont icon-youxiang"></i>邮箱：webpack.cn</p>
+                            <!-- <div class="ewm">
+                                <img src="" alt="">
+                                <p>关注微信，了解更多资讯</p>
+                            </div> -->
+                        </div>
+                        <!-- 地图 -->
+                        <div class="map_wrap">
+                            <div class="map">
+                               <img src="./img/map.png" alt="">
+                               <div class="city">
+                                     <img src="./img/city.png" alt=""><span>webpack</span>
+                               </div>
+                            </div>
+                            <!-- <div class="maptest"></div> -->
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <!-- 回到头部 -->
+            <div class="top">
+                   <a href="#page1"><img src="./img/go_top.png" alt=""></a>
+            </div>
+            <div class="beian">Copyright webpack. <br />All rights reserved webpack</div>
+        </div>
+    </div>
+
 </body>
+<!-- <script src="./js/index.js"></script> -->
+<script>
+</script>
 </html>
