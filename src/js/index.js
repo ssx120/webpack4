@@ -1,4 +1,3 @@
-console.log(456)
 import '../css/fullpage.min.css'
 import '../font/iconfont.css'
 import '../css/style.css'
@@ -172,3 +171,7 @@ $(document).ready(function() {
       a = true;
     })
 });
+if (module.hot) {
+  // 实现热更新
+  module.hot.accept();
+}
