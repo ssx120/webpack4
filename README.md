@@ -110,7 +110,7 @@ module:{//关于模块配置
 ```
                 4、plugins
                 抽离html css
-                html css (npm install html-webpack-plugin extract-text-webpack-plugin@next -s)
+                html css (npm install html-webpack-plugin mini-css-extract-plugin -s)
 ```
                 plugins:[//插件
                 // css
@@ -134,15 +134,29 @@ module:{//关于模块配置
    -----使用 babel-polyfill 解决兼容性问题 : npm install -D @babel/plugin-transform-runtime  @babel/polyfill
    4.2: 在根目录新建一个babel配置文件 .babelrc：
 ```
-                     
-                 {
-                 "presets": [
-                         '@babel/preset-env'
-                   ],
-                   "plugins": [
-                          '@babel/plugin-transform-runtime'
-                        ]
-                 }
+ {
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "usage",
+                "modules": false
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "corejs": false,
+                "helpers": false,
+                "regenerator": false,
+                "useESModules": false
+            }
+        ]
+    ],
+    "comments": false
+}
 ```
 在config文件中
 module.exports = { entry: ["@babel/polyfill", "./app/js"], };
@@ -153,12 +167,13 @@ module.exports = { entry: ["@babel/polyfill", "./app/js"], };
                 module: {
                   rules: [
                    {
-                    test: /\.js$/,
-                    exclude: /node_modules/,
-                     use: {
-                   loader: "babel-loader"
-                     }
-                    }
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader",
+			options: {
+			  presets: ["@babel/preset-env"]
+			}
+		    },
                   ]
                  }
       }
@@ -167,16 +182,33 @@ module.exports = { entry: ["@babel/polyfill", "./app/js"], };
     在package.json中配置
 ```
              "scripts": {
-                    "start": "webpack-dev-server --inline  --open"
+                    "dev": "webpack-dev-server --inline  --open"
                    }
 ```
 ```
 // 本地服務
   devServer: {
     contentBase: "src",
-    inline: true
-    // host:"0.0.0.0",
-    // hot:"8080"
+    host: "192.168.50.36", // 默认是localhost
+    open: true, // 自动打开浏览器
+    port: 8000, // 本地服务器端口号
+    hot: true, // 热重载
+    overlay: true, // 如果代码出错，会在浏览器页面弹出“浮动层”。类似于 vue-cli 等脚手架
+    proxy: {
+      // 跨域代理转发
+    //   "/comments": {
+    //     target: "https:xxx.com",
+    //     changeOrigin: true,
+    //     logLevel: "debug",
+    //     headers: {
+    //       Cookie: ""
+    //     }
+    //   }
+    },
+    historyApiFallback: {
+    // HTML5 history模式
+    //   rewrites: [{ from: /.*/, to: "/index.html" }]
+    }
   },
 ```	
 
