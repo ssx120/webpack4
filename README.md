@@ -108,9 +108,11 @@ module:{//关于模块配置
 ]
 }
 ```
-                4、plugins
-                抽离html css
-                html css (npm install html-webpack-plugin mini-css-extract-plugin -s)
+
+4、plugins
+抽离html css
+html css (npm install html-webpack-plugin mini-css-extract-plugin -s)
+
 ```
                 plugins:[//插件
                 // css
@@ -129,10 +131,12 @@ module:{//关于模块配置
                 ]
 
 ```
+
 4、bable转换 ES6 代码，解决浏览器兼容问题用 babel 转换 ES6 代码
    4.1：安装babel依赖  npm install -D babel-loader @babel/core @babel/preset-env 
    -----使用 babel-polyfill 解决兼容性问题 : npm install -D @babel/plugin-transform-runtime  @babel/polyfill
    4.2: 在根目录新建一个babel配置文件 .babelrc：
+   
 ```
  {
     "presets": [
@@ -157,11 +161,13 @@ module:{//关于模块配置
     ],
     "comments": false
 }
+
 ```
 在config文件中
 module.exports = { entry: ["@babel/polyfill", "./app/js"], };
 
 4.3:将配置用于webpack打包中，在根目录下新建webpack.config.js配置文件
+
 ```
   module.exports = {
                 module: {
@@ -178,8 +184,10 @@ module.exports = { entry: ["@babel/polyfill", "./app/js"], };
                  }
       }
 ```
+
     4.4：server服务（npm install webpack-dev-server -s）
     在package.json中配置
+    
 ```
              "scripts": {
                     "dev": "webpack-dev-server --inline  --open"
