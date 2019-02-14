@@ -219,8 +219,20 @@ module.exports = { entry: ["@babel/polyfill", "./app/js"], };
     }
   },
 ```	
-
-
+运行时修改----------------------------------------------------------------------------
+output: {
+    filename: "js/[name].bundle.js",
+    path: path.resolve(__dirname, "/dist"),
+    // chunkFilename: "[name]-[hash:5].chunk.js",
+    publicPath: "/"
+  },
+打包时--------------------------
+output: {
+    filename: "js/[name].bundle.js",
+    path: path.resolve(__dirname, "./dist"),
+    // chunkFilename: "[name]-[hash:5].chunk.js",
+    publicPath: "./"
+  },
 
 
 
