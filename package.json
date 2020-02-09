@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development  --open chrome"
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --mode production",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development  --open chrome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.2.0",
+    "cross-env": "^7.0.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   },
@@ -21,6 +22,7 @@
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/polyfill": "^7.0.0",
     "autoprefixer": "^9.4.2",
+    "axios": "^0.19.2",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.0.0",
@@ -29,9 +31,9 @@
     "html-withimg-loader": "^0.1.16",
     "i": "^0.3.6",
     "mini-css-extract-plugin": "^0.5.0",
-    "move-js": "^0.5.0",
     "npm": "^6.5.0",
     "postcss-loader": "^3.0.0",
+    "qs": "^6.9.1",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.2",

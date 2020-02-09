@@ -1,0 +1,42 @@
+
+/* 登录页面 */
+#login{
+    padding: 0 40px;
+}
+.logo{
+    width: 246px;
+    height: 64px;
+    margin: 0 auto;
+    margin-top: 76px;
+}
+.input{
+    margin:  0 auto;
+    margin-top: 130px;
+    box-sizing: border-box;
+}
+.input input{
+    width: 100%;
+    height: 50px;
+    border: solid 1px #DAD8D8;;
+    border-radius: 10px;
+    padding: 0 20px;
+    font-size: 19px;
+    font-family: PingFangSC-Regular;
+}   
+.userName{
+    margin-bottom: 28px;
+}
+.btn{
+    width: 100%;
+    height: 50px;
+    background: #F08408;
+    border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 60px;
+    border: 0;
+    font-family: PingFangSC-Regular;
+    font-size: 19px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 36px;
+}

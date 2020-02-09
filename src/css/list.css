@@ -1,0 +1,36 @@
+.list-title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    background: #F08408;
+    font-family: PingFangSC-Medium;
+    font-size: 17px;
+    color: #FFFFFF;
+    text-align: center;    
+}
+.list-wrap{
+    margin-top: 44px;
+    padding:0 24px;
+}
+.list-wrap li{
+    width: 100%;
+    height: 64px;
+    padding: 8px 0;
+    border-bottom: 1px solid #BEBBBB;
+    display: flex;
+}
+.list-wrap li img{
+    width: 72px;
+    height: 47px;
+}
+.list-wrap li span{
+    margin-left: 34px;
+    line-height: 47px;
+    display: block;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    text-align: center;
+}
