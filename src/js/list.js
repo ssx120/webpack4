@@ -3,6 +3,7 @@ import '../css/list.css'
 import axios from './axios.js'
 import API from './api.js'
 import {getRequest,getDataset} from "./utils.js"
+require("expose-loader?$!jquery");
 $(document).ready(function() {
 
     let cate = null

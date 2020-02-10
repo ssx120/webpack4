@@ -2,10 +2,11 @@ import '../css/style.css'
 import '../css/index.css'
 import axios from './axios.js'
 import API from './api.js'
+require("expose-loader?$!jquery");
 $(document).ready(function() {
 
   // 统计代码
-
+  
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
